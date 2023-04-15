@@ -1,6 +1,6 @@
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
-export default({
+export default ({
   ssr: false,
   target: 'server',
 
@@ -17,4 +17,7 @@ export default({
   },
 
   components: true,
+  modules: [
+    '@nuxtjs/tailwindcss'
+  ]
 })

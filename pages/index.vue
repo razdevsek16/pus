@@ -26,8 +26,8 @@ import clock from "~/components/utils/clock.vue";
 export default {
   components: { clock },
   async created() {
-    let data = await this.$api.users.getUser(1);
-    console.log(data);
+    this.user = await this.$api.users.getUser(2);
+    //console.log(this.user);
   },
   data: function () {},
 };

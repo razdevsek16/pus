@@ -12,6 +12,9 @@ yarn install
 
 # npm
 npm install
+npm install bootstrap-vue
+npm install @nuxtjs/axios
+npm install --save-dev @nuxtjs/tailwindcss
 
 # pnpm
 pnpm install

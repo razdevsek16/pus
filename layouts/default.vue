@@ -5,8 +5,12 @@
         <NuxtLink to="/" class="font-bold">TrackUser</NuxtLink>
         <ul class="flex gap-5">
           <li><NuxtLink to="/">Home</NuxtLink></li>
-          <li><NuxtLink to="/user/register">Register</NuxtLink></li>
-          <li><NuxtLink to="/user/login">Login</NuxtLink></li>
+          <li><NuxtLink to="/user/login" class="btnLogin">Login</NuxtLink></li>
+          <li>
+            <NuxtLink to="/user/register" class="btnRegister"
+              >Register</NuxtLink
+            >
+          </li>
         </ul>
       </nav>
     </header>

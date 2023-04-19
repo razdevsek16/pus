@@ -16,8 +16,21 @@ export default ({
     ]
   },
 
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  plugins: [
+    { src: '~/plugins/api.js' },
+  ],
+
+  css: [
+    '~/node_modules/bootstrap/dist/css/bootstrap.min.css',
+  ],
+
+  router: {
+    middleware: ['auth',]
+  },
+
   components: true,
   modules: [
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
   ]
 })

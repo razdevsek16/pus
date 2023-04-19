@@ -10,6 +10,14 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.6.6",
+    "@types/bootstrap": "^5.2.6",
     "nuxt": "^3.4.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "bootstrap-vue": "^2.23.1",
+    "sass": "^1.62.0",
+    "sass-loader": "^13.2.2",
+    "vue": "^3.2.47"
   }
 }

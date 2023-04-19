@@ -1,14 +1,14 @@
 import headers from './headers'
-const route = `http://127.0.0.1:8000`
+const route = `http://127.0.0.1:8020`
 
-export default () => ({
+export default (store) => ({
     async getUser(id) {
         console.log("test")
-        let data = await useFetch(`${route}/user/${id}`);
+        const { data } = useFetch(`${route}/user/${id}`, headers.getHeaders(store));
         return data;
     },
     async getAllUsers() {
-        let data = await useFetch(`${route}/user/` + headers.buildQuery(args), headers.getHeaders(store));
+        let data = await useFetch(`${route}/user/`, headers.getHeaders(store));
         return data;
     },
 })

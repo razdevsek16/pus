@@ -11,3 +11,9 @@ export const state = () => ({
         variant: null
     },
 })
+
+export const actions = {
+    SET_SITE({ commit }, site) {
+        commit('SET_SITE', site)
+    }
+}

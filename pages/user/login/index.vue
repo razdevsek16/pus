@@ -1,19 +1,37 @@
 <template>
-  <div>
-    <section>
-      <div class="row p-20">
-        <div class="col-md-12 d-flex align-items-center text-light">
-          <div class="row py-1">
-            <div class="col-6" style="text-align: right">
-              <label>Ime</label>
-            </div>
-            <div class="col-6">
-              <input />
-            </div>
-          </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="username">Insert username or email</label>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            v-model="username"
+            placeholder="Enter user credetials"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Insert password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            v-model="password"
+            placeholder="Enter password"
+            required
+          />
+        </div>
+        <div style="text-align: center">
+          <button @click="loginUser()" class="btn btn-primary my-4 w-20">
+            Login
+          </button>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 
@@ -28,7 +46,18 @@ export default {
   data: function () {
     return {
       user: null,
+      username: "",
+      password: "",
     };
+  },
+  methods: {
+    loginUser() {
+      let formData = new FormData();
+      formData.append("username", this.username);
+      formData.append("password", this.password);
+      let data = { username: this.username, password: this.password };
+      this.user = this.$api.users.loginUser(formData);
+    },
   },
 };
 </script>

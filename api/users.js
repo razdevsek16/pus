@@ -12,11 +12,17 @@ export default (store) => ({
         return data;
     },
     async registerUser(user) {
-        console.log("registerUser")
         let data = await $fetch(`${route}/user/`, {
             method: 'POST',
             body: user
         });
         return data;
+    },
+    async loginUser(data) {
+        let login = await $fetch(`${route}/login`, {
+            method: 'POST',
+            body: data
+        });
+        return login;
     }
 })

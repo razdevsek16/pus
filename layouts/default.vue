@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="shadow-sm bg-dark fixed-top" style="opacity: 0.7">
-      <nav class="container mx-auto py-3 px-10 flex justify-between">
+      <nav class="container mx-auto py-2 px-10 flex justify-between">
         <NuxtLink to="/" class="btn btn-outline-light">TrackUser</NuxtLink>
         <ul class="flex gap-5">
           <li>
@@ -27,7 +27,11 @@
 
     <div class="hero-image">
       <div class="shadow-sm" style="min-height: 550px">
-        <slot></slot>
+        <div class="row p-20" style="padding-top: 6rem">
+          <div class="col align-items-center text-light">
+            <slot></slot>
+          </div>
+        </div>
       </div>
 
       <footer>

@@ -11,4 +11,12 @@ export default (store) => ({
         let data = await useFetch(`${route}/user/`, headers.getHeaders(store));
         return data;
     },
+    async registerUser(user) {
+        console.log("registerUser")
+        let data = await $fetch(`${route}/user/`, {
+            method: 'POST',
+            body: user
+        });
+        return data;
+    }
 })

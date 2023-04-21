@@ -20,6 +20,7 @@
 <script>
 import clock from "~/components/utils/clock.vue";
 export default {
+  name: "LoginUser",
   components: { clock },
   async created() {
     this.user = await this.$api.users.getUser(1);

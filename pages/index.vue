@@ -1,8 +1,8 @@
 <template>
   <div>
     <section>
-      <div class="row p-20">
-        <div class="col-md-6 d-flex align-items-center text-light">
+      <div class="row p-2">
+        <div class="col-md-6">
           <div>
             <h4 class="tp-text-uppercase-sm my-3">
               Registrator delovnega časa
